@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Interesting Sciences — Explore. Question. Discover. Inspire.</title>
+<meta name="description" content="Interesting Sciences is an accessible science-communication platform that connects scientific knowledge with everyday life.">
+<!-- Link preview (WhatsApp, Facebook, LinkedIn, X). Replace YOUR-SITE.vercel.app with your real address. -->
+<link rel="canonical" href="https://YOUR-SITE.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Interesting Sciences">
+<meta property="og:title" content="Interesting Sciences">
+<meta property="og:description" content="A digital home for curiosity, discovery and scientific thinking.">
+<meta property="og:url" content="https://YOUR-SITE.vercel.app/">
+<meta property="og:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Interesting Sciences logo with the words Explore, Question, Discover, Inspire">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@SciInteresting">
+<meta name="twitter:title" content="Interesting Sciences">
+<meta name="twitter:description" content="A digital home for curiosity, discovery and scientific thinking.">
+<meta name="twitter:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
+<meta name="theme-color" content="#0F1E38">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231B5BA0'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23009999'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%23F4B034'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1E38;--blue:#1B5BA0;--teal:#007F7F;--amber:#F4B034;--coral:#E0604B;--green:#3A8F69;--ink:#16233B;--muted:#55627A;--paper:#F5F8FB;--line:#DCE4EE;--serif:'Newsreader',Georgia,serif;--sans:'Figtree',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.6;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:16px}
+h3{font-size:1.3rem;margin-bottom:6px}
+p.lead{font-size:1.15rem;color:var(--muted);max-width:62ch}
+section{padding:88px 0}
+.alt{background:var(--paper)}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(15,30,56,.96);backdrop-filter:blur(8px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-family:var(--serif);font-size:1.25rem;font-weight:600}
+.mark,.logo{width:40px;height:40px;flex:none}
+.logo{border-radius:50%;object-fit:cover;background:#1B5BA0}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{color:#C9D5E6;text-decoration:none;font-size:.95rem;font-weight:500}
+nav a:hover{color:#fff}
+.menu{display:none;background:none;border:1px solid #3a4c6b;color:#fff;border-radius:6px;padding:6px 12px;font:inherit;cursor:pointer}
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:96px 0 104px;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.orbit{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:640px;height:640px;pointer-events:none}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);max-width:15ch}
+.hero .sub{margin-top:22px;font-size:1.25rem;color:#C9D5E6;max-width:48ch}
+.ask{margin-top:44px;border-left:4px solid var(--amber);padding:4px 0 4px 20px;max-width:560px}
+.ask small{display:block;color:#9FB2CF;font-size:.9rem;margin-bottom:6px}
+#q{font-family:var(--serif);font-size:clamp(1.4rem,3vw,1.9rem);min-height:2.6em;transition:opacity .25s}
+#q.out{opacity:0}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.btn{display:inline-block;padding:13px 24px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--amber);font:600 1rem var(--sans);cursor:pointer}
+.btn.p{background:var(--amber);color:var(--navy)}
+.btn.p:hover{background:#ffc455}
+.btn.s{background:none;color:#fff;border-color:#4a5f82}
+.btn.s:hover{border-color:#fff}
+/* about */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.aims{display:grid;gap:26px}
+.aims div{border-left:4px solid var(--c);padding-left:18px}
+.aims p{color:var(--muted)}
+.note{margin-top:28px;font-style:italic;color:var(--muted);font-size:.95rem}
+/* objectives */
+.obj{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:40px}
+.obj div{padding:26px 26px 26px 0;border-bottom:1px solid var(--line)}
+.obj p{color:var(--muted);font-size:.98rem}
+/* programs */
+.prog{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 56px;margin-top:40px}
+.prog article{padding:22px 0 22px 20px;border-left:5px solid var(--c)}
+.prog p{color:var(--muted)}
+/* method */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin-top:44px;counter-reset:s;list-style:none}
+.steps li{counter-increment:s;position:relative;padding-top:60px}
+.steps li::before{content:counter(s);position:absolute;top:0;left:0;width:44px;height:44px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;font:600 1.1rem var(--serif)}
+.steps li::after{content:"";position:absolute;top:21px;left:52px;right:8px;height:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps b{display:block;font-family:var(--serif);font-size:1.2rem;margin-bottom:4px}
+.steps span{color:var(--muted);font-size:.95rem}
+.promise{margin-top:44px;padding:20px 24px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);font-weight:600}
+/* audiences, outreach */
+.rows{margin-top:36px;border-top:1px solid var(--line)}
+.rows div{display:grid;grid-template-columns:280px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--line)}
+.rows b{font-family:var(--serif);font-size:1.2rem;font-weight:600}
+.rows span{color:var(--muted)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chips li{list-style:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 18px;font-weight:500;font-size:.95rem}
+.chips small{color:var(--muted);font-weight:400}
+/* trust */
+.trust{background:var(--navy);color:#fff}
+.trust h2{color:#fff}
+.trust .lead{color:#C9D5E6}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 40px;margin-top:44px}
+.tgrid div{border-top:3px solid var(--c);padding-top:16px}
+.tgrid p{color:#B6C4DA;font-size:.98rem}
+/* connect */
+.connect{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.handles{display:grid;gap:14px}
+.handles a,.handles div{display:flex;justify-content:space-between;gap:16px;padding:18px 22px;border:1px solid var(--line);border-radius:8px;text-decoration:none;background:#fff}
+.handles a:hover{border-color:var(--blue)}
+.handles span{color:var(--muted)}
+.handles b{color:var(--blue)}
+footer{background:#0A1529;color:#9FB2CF;padding:36px 0;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media(max-width:900px){
+ section{padding:64px 0}
+ .split,.cols,.connect,.prog{grid-template-columns:1fr}
+ .obj,.tgrid{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr;gap:28px}
+ .steps li{padding:0 0 0 64px}
+ .steps li::after{display:none}
+ .rows div{grid-template-columns:1fr;gap:4px}
+ .orbit{opacity:.35;right:-260px}
+ .menu{display:block}
+ nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);padding:12px 24px 20px}
+ nav.open{display:block}
+ nav ul{flex-direction:column;gap:14px}
+}
+@media(max-width:560px){.obj,.tgrid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#q{transition:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a class="brand" href="#top" aria-label="Interesting Sciences home">
+   <!-- LOGO PLACEHOLDER: save your logo as assets/logo.png -->
+   <img class="logo" src="assets/logo.png" alt="" width="40" height="40" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+   <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" style="display:none"><circle cx="16" cy="16" r="16" fill="#1B5BA0"/><circle cx="16" cy="16" r="10" fill="#009999"/><circle cx="16" cy="16" r="4.5" fill="#F4B034"/></svg>
+   Interesting Sciences
+  </a>
+  <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#approach">Approach</a></li>
+    <li><a href="#audiences">Audiences</a></li>
+    <li><a href="#outreach">Outreach</a></li>
+    <li><a href="#trust">Trust</a></li>
+    <li><a href="#connect">Connect</a></li>
+   </ul>
+  </nav>
+ </div>
+</header>
+
+<main id="top">
+<div class="hero">
+ <svg class="orbit" viewBox="0 0 640 640" aria-hidden="true"><circle cx="320" cy="320" r="320" fill="#1B5BA0" opacity=".55"/><circle cx="320" cy="320" r="200" fill="#009999" opacity=".7"/><circle cx="320" cy="320" r="70" fill="#F4B034"/></svg>
+ <div class="wrap">
+  <h1>A digital home for curiosity and scientific thinking.</h1>
+  <p class="sub">Interesting Sciences turns complex ideas into clear, engaging and trustworthy stories, for students, families and curious minds everywhere.</p>
+  <div class="ask">
+   <small>Today’s question</small>
+   <p id="q" aria-live="polite">Why is the sky blue?</p>
+  </div>
+  <div class="btns">
+   <button class="btn p" id="next" type="button">Ask another question</button>
+   <a class="btn s" href="#programs">See our programs</a>
+  </div>
+ </div>
+</div>
+
+<section id="about">
+ <div class="wrap split">
+  <div>
+   <h2>Make science feel close to everyone.</h2>
+   <p class="lead">Science is not only a subject to study. It is a way to understand life, question assumptions and imagine better futures.</p>
+   <p class="lead" style="margin-top:16px">Interesting Sciences connects scientific knowledge with everyday life, online and in communities.</p>
+   <p class="note">A public-facing platform. It is not a substitute for scientific institutions, journals or professional advice.</p>
+  </div>
+  <div class="aims">
+   <div style="--c:var(--teal)"><h3>Make science understandable</h3><p>Translate discoveries, concepts and evidence into clear, engaging stories.</p></div>
+   <div style="--c:var(--amber)"><h3>Make learning memorable</h3><p>Use visuals, explainers, quizzes, timelines and real-world examples.</p></div>
+   <div style="--c:var(--coral)"><h3>Make curiosity contagious</h3><p>Invite people to ask questions, explore and share what they learn.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="objectives">
+ <div class="wrap">
+  <h2>What guides every page</h2>
+  <p class="lead">Six objectives shape everything we publish and every event we run.</p>
+  <div class="obj">
+   <div><h3>Build scientific temper</h3><p>Encourage evidence, reason, healthy scepticism and open-mindedness.</p></div>
+   <div><h3>Demystify discovery</h3><p>Explain how science works, from a simple question to reliable evidence.</p></div>
+   <div><h3>Connect science to society</h3><p>Link research to health, climate, technology, agriculture and daily life.</p></div>
+   <div><h3>Inspire young minds</h3><p>Help students, educators and families see themselves as explorers.</p></div>
+   <div><h3>Celebrate Indian science</h3><p>Highlight Indian researchers, institutions, innovations and missions.</p></div>
+   <div><h3>Enable informed choices</h3><p>Share credible, sourced information and counter misinformation responsibly.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="programs">
+ <div class="wrap">
+  <h2>Our signature programs</h2>
+  <p class="lead">Six recurring series give readers a reason to come back.</p>
+  <div class="prog">
+   <article style="--c:var(--teal)"><h3>WHY Science?</h3><p>A question-led series explaining the science behind everyday phenomena.</p></article>
+   <article style="--c:var(--amber)"><h3>Science in 60 Seconds</h3><p>Quick, visual explainers designed for mobile-first audiences.</p></article>
+   <article style="--c:var(--coral)"><h3>Discoveries that Changed the World</h3><p>Stories of landmark ideas, people and turning points.</p></article>
+   <article style="--c:var(--blue)"><h3>Space &amp; the Universe</h3><p>Missions, astronomy, planetary science and cosmic questions.</p></article>
+   <article style="--c:var(--green)"><h3>Science for a Sustainable Future</h3><p>Climate, clean energy, biodiversity, water and circularity.</p></article>
+   <article style="--c:var(--teal)"><h3>Young Innovators</h3><p>Student projects, grassroots ingenuity, STEM pathways and role models.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="approach">
+ <div class="wrap">
+  <h2>Clear, credible, compelling</h2>
+  <p class="lead">Every article, video and activity follows the same five steps.</p>
+  <ol class="steps">
+   <li style="--c:var(--teal)"><b>Ask</b><span>Start with a question people genuinely wonder about.</span></li>
+   <li style="--c:var(--blue)"><b>Explain</b><span>Use plain language, analogies and accurate visuals.</span></li>
+   <li style="--c:var(--amber)"><b>Evidence</b><span>Cite reliable sources and distinguish fact from interpretation.</span></li>
+   <li style="--c:var(--coral)"><b>Connect</b><span>Show why the idea matters in everyday life.</span></li>
+   <li style="--c:var(--green)"><b>Invite</b><span>End with a question, activity or next step.</span></li>
+  </ol>
+  <p class="promise">Our editorial promise: accessible language, scientific accuracy, inclusive storytelling and source transparency.</p>
+ </div>
+</section>
+
+<section id="audiences">
+ <div class="wrap">
+  <h2>Designed for curious minds of every age</h2>
+  <div class="rows">
+   <div><b>Students</b><span>Short explainers, quizzes, career inspiration and hands-on ideas.</span></div>
+   <div><b>Teachers &amp; educators</b><span>Classroom-ready resources, activities and trusted references.</span></div>
+   <div><b>Families &amp; general public</b><span>Everyday science, health literacy, environment and technology.</span></div>
+   <div><b>Young researchers &amp; innovators</b><span>Research stories, emerging technologies and pathways to innovation.</span></div>
+   <div><b>Media &amp; science institutions</b><span>Shareable explainers, expert perspectives and collaboration opportunities.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="alt" id="outreach">
+ <div class="wrap cols">
+  <div>
+   <h2>From screen to real-world discovery</h2>
+   <p class="lead">Science works best when people can see it, try it and talk about it together.</p>
+   <ul class="chips" aria-label="Content formats">
+    <li>Articles &amp; explainers</li><li>Infographics</li><li>Short videos &amp; reels</li><li>Quizzes &amp; polls</li><li>Interviews &amp; profiles</li><li>Resource library</li>
+   </ul>
+  </div>
+  <div class="rows" style="margin-top:0">
+   <div style="grid-template-columns:1fr"><b>Science conversations</b><span>Live talks, Q&amp;A sessions and expert conversations.</span></div>
+   <div style="grid-template-columns:1fr"><b>School &amp; college engagement</b><span>Question challenges, science clubs and themed learning packs.</span></div>
+   <div style="grid-template-columns:1fr"><b>Public science moments</b><span>Astronomy nights, science days, exhibitions and demonstrations.</span></div>
+   <div style="grid-template-columns:1fr"><b>Citizen science</b><span>Observe, measure, document and contribute data.</span></div>
+   <div style="grid-template-columns:1fr"><b>Community partnerships</b><span>Work with museums, universities, labs and science centres.</span></div>
+   <div style="grid-template-columns:1fr"><b>Hands-on learning</b><span>Simple experiments, maker activities and safe home demonstrations.</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="trust" id="trust">
+ <div class="wrap">
+  <h2>Trust is the foundation of science communication</h2>
+  <p class="lead">These standards apply to everything we publish.</p>
+  <div class="tgrid">
+   <div style="--c:var(--teal)"><h3>Evidence first</h3><p>We use primary papers, official agencies, recognised scientific bodies and expert review.</p></div>
+   <div style="--c:var(--amber)"><h3>Transparent sourcing</h3><p>We cite sources, dates and links, and correct errors openly and promptly.</p></div>
+   <div style="--c:var(--coral)"><h3>No sensationalism</h3><p>We avoid exaggerated claims, misleading visuals and false certainty.</p></div>
+   <div style="--c:var(--blue)"><h3>Accessible by design</h3><p>Mobile-first, readable contrast, alt text, captions and plain language.</p></div>
+   <div style="--c:var(--green)"><h3>Respect and inclusion</h3><p>We represent diverse scientists, regions, languages and lived experiences.</p></div>
+   <div style="--c:var(--teal)"><h3>Responsible engagement</h3><p>We moderate respectfully and separate educational content from professional advice.</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="connect">
+ <div class="wrap connect">
+  <div>
+   <h2>Let curiosity light the way.</h2>
+   <p class="lead">Follow along for timely science, WHY threads and short videos. Teachers, researchers, media and institutions are welcome to collaborate.</p>
+  </div>
+  <div class="handles">
+   <a href="https://x.com/SciInteresting" target="_blank" rel="noopener"><span>Interesting Sciences on X</span><b>@SciInteresting</b></a>
+   <a href="https://x.com/narottamsahoo?lang=en" target="_blank" rel="noopener"><span>Creator on X</span><b>@narottamsahoo</b></a>
+   <a href="https://www.youtube.com/@InterestingSciences" target="_blank" rel="noopener"><span>Watch on YouTube</span><b>@InterestingSciences</b></a>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <span>© <span id="yr"></span> Interesting Sciences. Explore. Question. Discover. Inspire.</span>
+  <span><a href="https://x.com/SciInteresting" target="_blank" rel="noopener">X</a> &nbsp;|&nbsp; <a href="https://www.youtube.com/@InterestingSciences" target="_blank" rel="noopener">YouTube</a> &nbsp;|&nbsp; Educational content only. Not professional advice.</span>
+ </div>
+</footer>
+
+<script>
+const qs=["Why is the sky blue?","Why do we dream?","How do plants know which way is up?","Why does the Moon always show us the same face?","How does a vaccine teach the body?","Why do monsoon clouds bring rain?","How do satellites stay in orbit?","Why does ice float?"];
+let i=0;const q=document.getElementById('q');
+document.getElementById('next').addEventListener('click',()=>{
+ q.classList.add('out');
+ setTimeout(()=>{i=(i+1)%qs.length;q.textContent=qs[i];q.classList.remove('out')},250);
+});
+const m=document.querySelector('.menu'),n=document.getElementById('nav');
+m.addEventListener('click',()=>{const o=n.classList.toggle('open');m.setAttribute('aria-expanded',o)});
+n.addEventListener('click',e=>{if(e.target.tagName==='A'){n.classList.remove('open');m.setAttribute('aria-expanded',false)}});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
