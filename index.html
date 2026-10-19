@@ -23,7 +23,10 @@
 <meta name="twitter:description" content="A digital home for curiosity, discovery and scientific thinking.">
 <meta name="twitter:image" content="https://YOUR-SITE.vercel.app/og-image.jpg">
 <meta name="theme-color" content="#0F1E38">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%231B5BA0'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23009999'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='%23F4B034'/%3E%3C/svg%3E">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
@@ -54,9 +57,9 @@ nav a:hover{color:#fff}
 /* hero */
 .hero{background:var(--navy);color:#fff;padding:96px 0 104px;position:relative;overflow:hidden}
 .hero .wrap{position:relative;z-index:1}
-.orbit{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:640px;height:640px;pointer-events:none}
-.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);max-width:15ch}
-.hero .sub{margin-top:22px;font-size:1.25rem;color:#C9D5E6;max-width:48ch}
+.herologo{position:absolute;right:24px;top:50%;transform:translateY(-50%);width:min(38vw,450px);height:auto;border-radius:50%;box-shadow:0 0 0 10px rgba(244,176,52,.18),0 30px 80px rgba(0,0,0,.45)}
+.hero h1{font-size:clamp(2.4rem,5.4vw,4rem);max-width:13ch}
+.hero .sub{margin-top:22px;font-size:1.2rem;color:#C9D5E6;max-width:40ch}
 .ask{margin-top:44px;border-left:4px solid var(--amber);padding:4px 0 4px 20px;max-width:560px}
 .ask small{display:block;color:#9FB2CF;font-size:.9rem;margin-bottom:6px}
 #q{font-family:var(--serif);font-size:clamp(1.4rem,3vw,1.9rem);min-height:2.6em;transition:opacity .25s}
@@ -123,7 +126,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
  .steps li{padding:0 0 0 64px}
  .steps li::after{display:none}
  .rows div{grid-template-columns:1fr;gap:4px}
- .orbit{opacity:.35;right:-260px}
+ .herologo{position:static;transform:none;width:170px;margin-bottom:28px;box-shadow:0 0 0 6px rgba(244,176,52,.18)}
+ .hero{padding:56px 0 72px}
  .menu{display:block}
  nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--navy);padding:12px 24px 20px}
  nav.open{display:block}
@@ -138,7 +142,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
  <div class="wrap bar">
   <a class="brand" href="#top" aria-label="Interesting Sciences home">
    <!-- LOGO PLACEHOLDER: save your logo as assets/logo.png -->
-   <img class="logo" src="assets/logo.jpg" alt="" width="40" height="40" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+   <img class="logo" src="assets/logo.png" alt="" width="40" height="40" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
    <svg class="mark" viewBox="0 0 32 32" aria-hidden="true" style="display:none"><circle cx="16" cy="16" r="16" fill="#1B5BA0"/><circle cx="16" cy="16" r="10" fill="#009999"/><circle cx="16" cy="16" r="4.5" fill="#F4B034"/></svg>
    Interesting Sciences
   </a>
@@ -159,8 +163,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <main id="top">
 <div class="hero">
- <svg class="orbit" viewBox="0 0 640 640" aria-hidden="true"><circle cx="320" cy="320" r="320" fill="#1B5BA0" opacity=".55"/><circle cx="320" cy="320" r="200" fill="#009999" opacity=".7"/><circle cx="320" cy="320" r="70" fill="#F4B034"/></svg>
- <div class="wrap">
+  <div class="wrap">
+  <img class="herologo" src="assets/logo-hero.webp" alt="Interesting Sciences logo: a glowing light bulb above an open book, surrounded by science icons" width="450" height="450">
   <h1>A digital home for curiosity and scientific thinking.</h1>
   <p class="sub">Interesting Sciences turns complex ideas into clear, engaging and trustworthy stories, for students, families and curious minds everywhere.</p>
   <div class="ask">
